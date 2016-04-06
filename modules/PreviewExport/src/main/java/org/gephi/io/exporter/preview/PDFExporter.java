@@ -79,12 +79,12 @@ public class PDFExporter implements ByteExporter, VectorExporter, LongTask {
     private boolean cancel = false;
     private PDFTarget target;
     //Parameters
-    private float marginTop = 18f;
-    private float marginBottom = 18f;
-    private float marginLeft = 18f;
-    private float marginRight = 18f;
+    private float marginTop = 0f;
+    private float marginBottom = 0f;
+    private float marginLeft = 0f;
+    private float marginRight = 0f;
     private boolean landscape = false;
-    private Rectangle pageSize = PageSize.A4;
+    private Rectangle pageSize = new Rectangle(1000,1000);
 
     @Override
     public boolean execute() {
